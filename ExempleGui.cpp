@@ -1,4 +1,5 @@
 #include <iostream>
+#include <SDL2/SDL.h>
 #include <cstring>
 #include <memory>
 
@@ -139,8 +140,6 @@ class InputManager_console : public InputManager{
 }
 };
 
-#include <SDL2/SDL.h>
-
 class Displayer_SDL : public Displayer {
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
@@ -212,7 +211,7 @@ public:
                     return {y, x};
                 }
             }
-            SDL_Delay(10); // экономим CPU
+            SDL_Delay(10);
         }
     }
 };
